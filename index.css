@@ -1,0 +1,32 @@
+.nav-link {
+    color: white !important;
+}
+.nav_item_hr{
+    width: 1px; height: 10px; background-color: white;
+}
+
+.jump_img {
+    width: 100%;
+    background-image: url(https://pierpaolo28.github.io/assets/img/posts/intro.jpg);
+}
+.overlay-image .normal {
+    transition: .5s ease;
+}
+
+.overlay-image:hover .normal {
+    opacity: 0;
+}
+
+.overlay-image .hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.hero_text {
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+.hero_text_header {
+    font-size: 80px;
+    color: #fff;
+    text-align: center;
+}
