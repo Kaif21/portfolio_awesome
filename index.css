@@ -23,10 +23,20 @@
 .hero_text {
     padding-top: 150px;
     padding-bottom: 150px;
+    margin: 0px;
 }
 
 .hero_text_header {
     font-size: 80px;
-    color: #fff;
+    color:#F9A821;
     text-align: center;
 }
+.section_header{
+    color:#F9A821;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+.fa-code,.fa-keyboard,.fa-pencil-alt{
+    color: white;
+}
+/*slider*/

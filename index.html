@@ -83,8 +83,52 @@
             </div>
         </div>
     </div>
+    <!--About Me-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-center section_header">About Me</h1>
+                <hr style="width: 10%; height: 1px; background-color: white;">
+            </div>
+            <div class="col-md-4 text-center">
+                <i class="fas fa-5x fa-code"></i>
+                <div class="card" style="background-color: transparent;">
+                    <div class="card-body">
+                        <p style="color: #F9A821;">Front-end Developer</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <i class="fas fa-5x fa-keyboard"></i>
+                <div class="card" style="background-color: transparent;">
+                    <div class="card-body">
+                        <p style="color: #F9A821;">Data Entry Specialist</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <i class="fas fa-5x fa-pencil-alt"></i>
+                <div class="card" style="background-color: transparent;">
+                    <div class="card-body">
+                        <p style="color: #F9A821;">Blogger</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-center section_header">Skills</h1>
+                <hr style="width: 10%; height: 1px; background-color: white;">
+            </div>
+        </div>
+    </div>
+    <!--slider-->
     <!--Optional JavaScript-->
     <script></script>
+    <!--Font_awesome-->
+    <script src="https://kit.fontawesome.com/aa196cecd2.js" crossorigin="anonymous"></script>
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -101,3 +145,35 @@
 </body>
 
 </html>
+
+
+
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
