@@ -1,43 +1,185 @@
+/*navbar*/
+
 .nav-link {
     color: white !important;
 }
-.nav_item_hr{
-    width: 1px; height: 10px; background-color: white;
+
+.nav_item_hr {
+    width: 1px;
+    height: 10px;
+    background-color: white;
 }
+
+/*hero_section*/
 
 .jump_img {
     width: 100%;
     background-image: url(https://pierpaolo28.github.io/assets/img/posts/intro.jpg);
 }
+
+/*
 .overlay-image .normal {
     transition: .5s ease;
 }
-
-.overlay-image:hover .normal {
-    opacity: 0;
-}
+*/
 
 .overlay-image .hover {
     background-color: rgba(0, 0, 0, 0.5);
 }
+
+.video-part {
+    width: 100%;
+    float: left;
+    position: relative;
+    overflow: hidden;
+    height: 500px;
+    animation: fadeInDown 5s infinite;
+}
+
+.video-part video {
+    margin-top: -15%;
+    width: 100%;
+}
+
+.video-part-content {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    padding-top: 8%;
+}
+
+.video-part-content .carousel-caption {
+    position: relative !important;
+    left: 0%;
+    right: 0%;
+}
+
+.video-part-content {
+    font-size: 50px;
+}
+
+.video-part-content {
+    font-size: 20px;
+}
+
+.affix {
+    width: 100%;
+    transition: ease 0.5s;
+    background: !important;
+    border-bottom: 2px solid !important;
+}
+
+.full-width {
+    width: 100%;
+    float: left;
+}
+
+.video-part-content .btn-info:hover {
+    border: 1px solid;
+    transition: ease 0.5s;
+    background: transparent;
+}
+
+@-webkit-keyframes fadeInDown {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -20%, 0);
+        transform: translate3d(0, -20%, 0);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -20%, 0);
+        transform: translate3d(0, -20%, 0);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+.fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+}
+
+@-webkit-keyframes fadeInUp {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -20%, 0);
+        transform: translate3d(0, -20%, 0);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -20%, 0);
+        transform: translate3d(0, -20%, 0);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+.fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+    animation-delay: 1s;
+    animation-duration: 0s;
+}
+
 .hero_text {
-    padding-top: 150px;
-    padding-bottom: 150px;
-    margin: 0px;
+    padding-top: 85px;
 }
 
 .hero_text_header {
     font-size: 80px;
-    color:#F9A821;
+    color: #F9A821;
     text-align: center;
 }
-.section_header{
-    color:#F9A821;
+
+/*about me*/
+
+.about-text {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+/*skill*/
+
+.section_header {
+    color: #F9A821;
     margin-top: 50px;
     margin-bottom: 30px;
 }
-.fa-5x{
+
+.fa-5x {
     color: white;
 }
 
-/*slider*/
+/*blog*/
+
+.blog-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
