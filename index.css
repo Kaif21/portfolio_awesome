@@ -1,8 +1,3 @@
-/* nav */
-.nav-link{
-    color: white !important;
-}
-/* ====================================== */
 /* hero */
 .jump_img {
     width: 100%;
@@ -18,3 +13,103 @@
     right: 0%;
 }
 /* ================================================== */
+.nav-con {
+    background-image: url(../img/top_bg.svg);
+    background-position:right;
+}
+.navbar{
+    box-shadow: none !important;
+}
+.neo-button {
+    width: 42px;
+    height: 42px;
+    outline: 0 !important;
+    cursor: pointer;
+    color: #fff;
+    font-size: 15px;
+    border: none;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+.btn-read {
+    background: transparent;
+    border-radius: 0;
+    border: 1px solid #ffffff;
+    color: #fff;
+}
+.section-box-eleven{
+
+    color: #fff;
+    position: relative;
+    overflow:hidden;
+ 
+}
+.section-box-eleven figure {
+    position: absolute;
+    padding: 10px 15px;
+    width: 100%;
+    bottom: -25%;
+    transition: ease-in-out .5s;
+    background: white;
+    border-top: 1px solid #fff;
+}
+.section-box-eleven:hover figure {
+    bottom: -16px;
+}
+
+
+/* .nav-pills.nav-pills-icons .nav-item .nav-link {
+    border-radius: 4px;
+}
+
+.nav-pills .nav-item .nav-link.active {
+    color: #fff;
+    background-color: #9c27b0;
+    box-shadow: 0 5px 20px 0 rgba(0,0,0,.2), 0 13px 24px -11px rgba(156,39,176,.6);
+}
+
+.nav-pills .nav-item .nav-link {
+    line-height: 24px;
+    font-size: 12px;
+    font-weight: 500;
+    min-width: 100px;
+    color: #555;
+    transition: all .3s;
+    border-radius: 30px;
+    padding: 10px 15px;
+    text-align: center;
+}
+
+.nav-pills .nav-item .nav-link:not(.active):hover {
+    background-color: rgba(200,200,200,.2);
+}
+
+
+.nav-pills .nav-item i {
+    display: block;
+    font-size: 30px;
+    padding: 15px 0;
+}
+a .material-icons {
+    vertical-align: middle;
+    font-size: 48px;
+}
+
+
+.tab-space {
+    padding: 20px 0 50px;
+}
+
+.profile-page .gallery img {
+    width: 100%;
+}
+
+.profile-page .profile .name{
+    margin-top: -80px;
+}
+
+
+.tab-content>.active {
+    display: block;
+} */
+/* ====================================================== */

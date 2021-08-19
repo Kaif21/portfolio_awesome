@@ -9,6 +9,20 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <!-- jqurey -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.slim.min.js"
+        integrity="sha512-6ORWJX/LrnSjBzwefdNUyLCMTIsGoNP6NftMy2UAm1JBm6PRZCO1d7OHBStWpVFZLO+RerTvqX/Z9mBFfCJZ4A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- material design css -->
+    <link rel="stylesheet"
+        href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
+        integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+    <!-- material fonts -->
+    <link rel="stylesheet" type="text/css"
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons">
+
     <!--optional CSS-->
     <link rel="stylesheet" href="index.css">
 
@@ -130,233 +144,157 @@
     <!-- ========================================================================= -->
     <!--projects-->
     <!--filter gallery-->
-    <div class="jumbotron p-0 " style="background-color: black;">
-        <div class="container text-center">
-            <div class="main">
-                <div style="margin-bottom: 35px;">
-                    <h2 class="section_header" style="color: white;">A Section Of My Work</h2>
-                    <hr style="width: 10%; height: 1px; background-color:white;">
-                </div>
-                <div id="myBtnContainer">
-                    <button class="btn active" onclick="filterSelection('All')">All</button>
-                    <button class="btn" onclick="filterSelection('Design')"> Design</button>
-                    <button class="btn" onclick="filterSelection('Development')">
-                        Development</button>
-                    <button class="btn" onclick="filterSelection('Data Entry')"> Data Entry</button>
-                    <button class="btn" onclick="filterSelection('Blogging')"> Blogging</button>
-                </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 ">
+                <ul id="filters" class="clearfix">
+                    <!-- <li><span class="filter active" data-filter=".app, .card, .icon, .logo, .web">All</span></li> -->
+                    <li><span class="filter active" data-filter=".all">All</span></li>
+                    <li><span class="filter" data-filter=".app">App</span></li>
+                    <li><span class="filter" data-filter=".card">Card</span></li>
+                    <li><span class="filter" data-filter=".icon">Icon</span></li>
+                    <li><span class="filter" data-filter=".logo">Logo</span></li>
+                    <li><span class="filter" data-filter=".web">Web</span></li>
+                </ul>
 
-                <!-- Portfolio Gallery Grid -->
-                <div class="row gallery-row All">
-                    <div class="col-md-4 col-sm-12 column Data Entry All ">
-                        <div class="content ">
-                            <img src="img/dam_koto_pic.png" alt="Dam koto" style="width:100%"
-                                onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+                <div id="profilelist">
+
+                    <div class="profile logo all " data-cat="logo">
+                        <div class="profile-wrapper ">
+                            <img src="../../resources/img/eyeshot_khalid.jpg" alt="">
+                            <div class="label">
+                                <div class="label-text">
+                                    <a class="text-title text-white">Bird Document</a>
+                                    <span class="text-category">APP</span>
+                                </div>
+                                <div class="label-bg"></div>
+                            </div>
                         </div>
-                        <p class="page_visit">Visit the page</p>
-                    </div>
-                    <div class=" col-md-4 col-sm-12 column  Data Entry All  ">
-                        <div class="content">
-                            <img src="img/vara_koto_pic.png" alt="Vara koto" style="width:100%"
-                                onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
-                        </div>
-                        <p class="page_visit">Vist the page</p>
-                    </div>
-                    <div class=" col-md-4 col-sm-12 column Development Design All ">
-                        <div class="content">
-                            <img src="img/sell_with_dam_koto_pic.png" alt="Sell with dam koto" style="width: 100%"
-                                onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
-                        </div>
-                        <p class="page_visit">Vist the page</p>
                     </div>
 
-                    <div class=" col-md-4 col-sm-12 column Blogging All ">
-                        <div class="content">
-                            <img src="img/locator_eduportalbd_pic.png" alt="LInstitution locator by eduportalbd.com"
-                                style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+                    <div class="profile app all" data-cat="app">
+                        <div class="profile-wrapper">
+                            <img src="../../resources/img/eyeshot_khalid.jpg" alt="">
+                            <div class="label">
+                                <div class="label-text">
+                                    <a class="text-title">Visual Infography</a>
+                                    <span class="text-category">APP</span>
+                                </div>
+                                <div class="label-bg"></div>
+                            </div>
                         </div>
-                        <p class="page_visit">Vist the page</p>
-                    </div>
-                    <div class=" col-md-4 col-sm-12 column  Data Entry All">
-                        <div class="content">
-                            <img src="img/promox_app_pic.png" alt="PromoX app" style="width:100%"
-                                onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
-                        </div>
-                        <p class="page_visit">Vist the page</p>
-                    </div>
-                    <div class=" col-md-4 col-sm-12 column Data Entry All">
-                        <div class="content">
-                            <img src="img/hospital_app_pic.png" alt="Hospital app" style="width:100%"
-                                onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
-                        </div>
-                        <p class="page_visit">Vist the page</p>
                     </div>
 
-                    <div class=" col-md-4 col-sm-12 column All">
-                        <div class="content">
-                            <img src="img/hiver_digital_pic.png" alt="Hiver digital" style="width:100%"
-                                onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
+                    <div class="profile web all" data-cat="web">
+                        <div class="profile-wrapper">
+                            <img src="../../resources/img/eyeshot_khalid.jpg" alt="">
+                            <div class="label">
+                                <div class="label-text">
+                                    <a class="text-title">Sonor's Design</a>
+                                    <span class="text-category">Web design</span>
+                                    <div class="my-5"></div>
+                                </div>
+                                <div class="label-bg"></div>
+                            </div>
                         </div>
-                        <p class="page_visit">Vist the page</p>
                     </div>
-                    <div class=" col-md-4 col-sm-12 column Design Development All">
-                        <div class="content">
-                            <img src="img/sell_with_damkoto_bn_pic.png" alt="Sell with dam koto bangla"
-                                style="width:100%" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
+
+                    <div class="profile card all" data-cat="card">
+                        <div class="profile-wrapper">
+                            <img src="../../resources/img/eyeshot_khalid.jpg" alt="">
+                            <div class="label">
+                                <div class="label-text">
+                                    <a class="text-title">Typography Company</a>
+                                    <span class="text-category">Business card</span>
+                                </div>
+                                <div class="label-bg"></div>
+                            </div>
                         </div>
-                        <p class="page_visit">Vist the page</p>
                     </div>
-                    <div class=" col-md-4 col-sm-12 column Blogging All">
-                        <div class="content">
-                            <img src="img/eduportalbd_pic.png" alt="Eduportalbd" style="width:100%"
-                                onclick="openModal();currentSlide(9)" class="hover-shadow cursor">
+
+                    <div class="profile app all" data-cat="app">
+                        <div class="profile-wrapper">
+                            <img src="/../img/profiles/app/3.jpg" alt="" />
+                            <div class="label">
+                                <div class="label-text">
+                                    <a class="text-title">Weatherette</a>
+                                    <span class="text-category">APP</span>
+                                </div>
+                                <div class="label-bg"></div>
+                            </div>
                         </div>
-                        <p class="page_visit">Vist the page</p>
+                    </div>
+
+                    <div class="profile card all" data-cat="card">
+                        <div class="profile-wrapper">
+                            <img src="img/profiles/card/4.jpg" alt="" />
+                            <div class="label">
+                                <div class="label-text">
+                                    <a class="text-title">BMF</a>
+                                    <span class="text-category">Business card</span>
+                                </div>
+                                <div class="label-bg"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="profile card all" data-cat="card">
+                        <div class="profile-wrapper">
+                            <img src="img/profiles/card/5.jpg" alt="" />
+                            <div class="label">
+                                <div class="label-text">
+                                    <a class="text-title">Techlion</a>
+                                    <span class="text-category">Business card</span>
+                                </div>
+                                <div class="label-bg"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!--modal_slider-->
-    <div class="row bg-light">
-        <div id="myModal" class="modal">
-            <span class="close cursor" onclick="closeModal()">X</span>
-            <div class="modal-content">
-                <div class="mySlides">
-                    <img src="img/dam_koto_pic.png" alt="Dam koto" style="width:100%">
-                </div>
-                <div class="mySlides">
-                    <img src="img/vara_koto_pic.png" alt="Vara koto" style="width:100%">
-                </div>
-                <div class="mySlides">
-                    <img src="img/sell_with_dam_koto_pic.png" alt="Sell with dam koto bangla" style="width:100%">
-                </div>
-                <div class="mySlides">
-                    <img src="img/locator_eduportalbd_pic.png" alt="Institution locator by eduportalbd.com"
-                        style="width:100%">
-                </div>
-                <div class="mySlides">
-                    <img src="img/promox_app_pic.png" alt="PromoX app" style="width:100%">
-                </div>
-                <div class="mySlides">
-                    <img src="img/hospital_app_pic.png" alt="Hospital app" style="width:100%">
-                </div>
-                <div class="mySlides">
-                    <img src="img/hiver_digital_pic.png" alt="Hiver digital" style="width:100%">
-                </div>
-                <div class="mySlides">
-                    <img src="img/sell_with_damkoto_bn_pic.png" alt="Sell with dam koto bangla" style="width:100%">
-                </div>
-                <div class="mySlides">
-                    <img src="img/eduportalbd_pic.png" alt="Eduportalbd" style="width:100%">
-                </div>
-                <!--slider_arrow-->
-                <a class="prev" onclick="plusSlides(-1)">❮</a>
-                <a class="next" onclick="plusSlides(1)">❯</a>
-                <div class="caption-container">
-                    <p id="caption"></p>
-                </div>
-            </div>
-        </div>
-    </div>
+    <script>$(function () {
 
-    <!--compatiable-->
+            var filterList = {
 
-    <!--Optional JavaScript-->
-    <script>
-        filterSelection("all")
-        function filterSelection(c) {
-            var x, i;
-            x = document.getElementsByClassName("column");
-            if (c == "all") c = "";
-            for (i = 0; i < x.length; i++) {
-                w3RemoveClass(x[i], "show");
-                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-            }
-        }
+                init: function () {
 
-        function w3AddClass(element, name) {
-            var i, arr1, arr2;
-            arr1 = element.className.split(" ");
-            arr2 = name.split(" ");
-            for (i = 0; i < arr2.length; i++) {
-                if (arr1.indexOf(arr2[i]) == -1) { element.className += " " + arr2[i]; }
-            }
-        }
+                    // MixItUp plugin
+                    // http://mixitup.io
+                    $('#profilelist').mixItUp({
+                        selectors: {
+                            target: '.profile',
+                            filter: '.filter'
+                        },
+                        load: {
+                            filter: '.all' // show app tab on first load
+                        }
+                    });
 
-        function w3RemoveClass(element, name) {
-            var i, arr1, arr2;
-            arr1 = element.className.split(" ");
-            arr2 = name.split(" ");
-            for (i = 0; i < arr2.length; i++) {
-                while (arr1.indexOf(arr2[i]) > -1) {
-                    arr1.splice(arr1.indexOf(arr2[i]), 1);
                 }
-            }
-            element.className = arr1.join(" ");
-        }
 
+            };
 
-        // Add active class to the current button (highlight it)
-        var btnContainer = document.getElementById("myBtnContainer");
-        var btns = btnContainer.getElementsByClassName("btn");
-        for (var i = 0; i < btns.length; i++) {
-            btns[i].addEventListener("click", function () {
-                var current = document.getElementsByClassName("active");
-                current[0].className = current[0].className.replace(" active", "");
-                this.className += " active";
-            });
-        }
+            // Run the show!
+            filterList.init();
 
+        });</script>
+    <!-- material design js -->
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/4.0.2/bootstrap-material-design.iife.min.js"
+        integrity="sha512-cxF8qa1v7W2ITWZEtc2Tdepy1FiRZy8Wi2xGJoO7jpmNFuxIYrkqND51EJloujIqn0MPvvIEKwiUwM51m7nR5Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+    <!-- font awesome -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
+        integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-        //work section/project
-        function openModal() {
-            document.getElementById('myModal').style.display = "block";
-        }
-        function closeModal() {
-            document.getElementById('myModal').style.display = "none";
-        }
-        var slideIndex = 1;
-        showSlides(slideIndex);
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
-        function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            var dots = document.getElementsByClassName("demo");
-            var captionText = document.getElementById("caption");
-            if (n > slides.length) { slideIndex = 1 }
-            if (n < 1) { slideIndex = slides.length }
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
-            captionText.innerHTML = dots[slideIndex - 1].alt;
-        }
-    </script>
-    <!--Font_awesome-->
-    <script src="https://kit.fontawesome.com/aa196cecd2.js" crossorigin="anonymous"></script>
-    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-        crossorigin="anonymous"></script>
-
-    <!-- Option 2: jQuery, Popper.js, and Bootstrap JS
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
     -->
 </body>
 
