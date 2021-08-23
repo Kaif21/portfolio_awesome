@@ -1,3 +1,7 @@
+/* nav */
+.navbar{
+box-shadow: none;
+}
 /* hero */
 
 .jump_img {
@@ -15,56 +19,26 @@
     left: 0%;
     right: 0%;
 }
+.section-box-eleven{
 
-/* ================================================== */
-/* 
-.nav-con {
-    background-image: url(../img/top_bg.svg);
-    background-position: right;
-}
-
-.navbar {
-    box-shadow: none !important;
-}
-
-.neo-button {
-    width: 42px;
-    height: 42px;
-    outline: 0 !important;
-    cursor: pointer;
-    color: #fff;
-    font-size: 15px;
-    border: none;
-    margin-right: 10px;
-    border-radius: 50%;
-}
-
-.btn-read {
-    background: transparent;
-    border-radius: 0;
-    border: 1px solid #ffffff;
-    color: #fff;
-}
-
-.section-box-eleven {
     color: #fff;
     position: relative;
-    overflow: hidden;
+    overflow:hidden;
+ 
 }
-
 .section-box-eleven figure {
     position: absolute;
-    padding: 10px 15px;
+    padding: 10px -1px;
     width: 100%;
-    bottom: -25%;
+    bottom: -31%;
     transition: ease-in-out .5s;
     background: white;
     border-top: 1px solid #fff;
 }
-
 .section-box-eleven:hover figure {
-    bottom: -16px;
+    bottom: -20px;
 }
+
 
 .nav-pills.nav-pills-icons .nav-item .nav-link {
     border-radius: 4px;
@@ -73,7 +47,7 @@
 .nav-pills .nav-item .nav-link.active {
     color: #fff;
     background-color: #9c27b0;
-    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, .2), 0 13px 24px -11px rgba(156, 39, 176, .6);
+    box-shadow: 0 5px 20px 0 rgba(0,0,0,.2), 0 13px 24px -11px rgba(156,39,176,.6);
 }
 
 .nav-pills .nav-item .nav-link {
@@ -89,19 +63,20 @@
 }
 
 .nav-pills .nav-item .nav-link:not(.active):hover {
-    background-color: rgba(200, 200, 200, .2);
+    background-color: rgba(200,200,200,.2);
 }
+
 
 .nav-pills .nav-item i {
     display: block;
     font-size: 30px;
     padding: 15px 0;
 }
-
 a .material-icons {
     vertical-align: middle;
     font-size: 48px;
 }
+
 
 .tab-space {
     padding: 20px 0 50px;
@@ -111,175 +86,20 @@ a .material-icons {
     width: 100%;
 }
 
-.profile-page .profile .name {
-    margin-top: -80px;
+.profile-page .profile .name{
+    margin-top: -70px;
 }
+
 
 .tab-content>.active {
     display: block;
-} */
-
-/* ====================================================== */
-.gallery-row>.column {
-    padding: 15px;
 }
-
-/* Create three equal columns that floats next to each other */
-
-.column {
-    float: left;
+.info-btn{
+    background-color: #F9A822!important;
+}
+.info-btn:hover{
+    background-color: green!important;
+}
+.section-box-eleven:hover > figure > span{
     display: none;
-    /* Hide all elements by default */
-}
-
-/* Content */
-
-.content {
-    background-color: white;
-    padding: 5px;
-}
-
-/* The "show" class is added to the filtered elements */
-
-.show {
-    display: block;
-}
-
-
-/* Style the buttons */
-
-
-.btn {
-    border: none;
-    outline: none;
-    padding: 12px 16px;
-    color: white;
-    cursor: pointer;
-    margin-top: 2px;
-    margin-bottom: 2px;
-}
-
-.btn:hover {
-    background-color: #F9A821;
-
-}
-
-/* The Modal (background) */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 0;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    background-color: black;
-}
-
-/* Modal Content */
-.modal-content {
-    position: relative;
-    background-color: #fefefe;
-    margin: auto;
-    padding: 0;
-    width: 90%;
-    max-width: 1200px;
-}
-
-/* The Close Button */
-.close {
-    color: white;
-    position: absolute;
-    top: 10px;
-    right: 25px;
-    font-size: 35px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: #999;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.mySlides {
-    display: none;
-}
-
-.cursor {
-    cursor: pointer
-}
-
-/* Next & previous buttons */
-.prev,
-.next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -50px;
-    color: #333;
-    font-weight: bold;
-    font-size: 20px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    -webkit-user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #fff;
-}
-
-/* Number text (1/3 etc) */
-
-
-.caption-container {
-    text-align: center;
-    background-color: black;
-    padding: 2px 16px;
-    color: white;
-}
-
-.demo {
-    opacity: 0.6;
-}
-
-.active,
-.demo:hover {
-    opacity: 1;
-}
-
-img.hover-shadow {
-    transition: 0.3s
-}
-
-.hover-shadow:hover {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
-}
-
-.hidden {
-    display: none;
-}
-
-.page_visit {
-    background:#218838;
-    width: 100%;
-    color: white;
-    font-size: 17px;
-    padding: 10px;
-    margin-top: 15px;
-    text-align: center;
 }
