@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-paper text-ink font-sans antialiased;
+  }
+  ::selection {
+    @apply bg-accent/40 text-ink;
+  }
+  :focus-visible {
+    outline: 2px solid #6c7068;
+    outline-offset: 2px;
+  }
+
+  /* Subtle scroll-reveal — elements start tucked down 16px, JS lifts them in */
+  .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+  /* Stagger children revealed together */
+  .reveal-stagger > .reveal:nth-child(2) { transition-delay: 80ms; }
+  .reveal-stagger > .reveal:nth-child(3) { transition-delay: 160ms; }
+  .reveal-stagger > .reveal:nth-child(4) { transition-delay: 240ms; }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+}
+
+@layer components {
+  .kicker {
+    @apply font-sans text-[11px] uppercase tracking-[0.3em] text-ink-faint;
+  }
+  .kicker-strong {
+    @apply font-sans text-[11px] uppercase tracking-[0.3em] text-ink;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 text-sm font-medium tracking-wide border border-transparent rounded-full transition-all duration-200;
+  }
+  .btn-primary {
+    @apply btn bg-ink text-white border-ink hover:bg-ink-soft hover:shadow-card;
+  }
+  .btn-secondary {
+    @apply btn bg-transparent text-ink border-hairline hover:border-ink;
+  }
+  .btn-accent {
+    @apply btn bg-accent text-ink border-accent hover:bg-accent-soft hover:border-accent-soft hover:shadow-card;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 bg-surface border border-hairline rounded-xl text-ink placeholder-ink-faint focus:border-ink focus:outline-none transition-colors duration-200;
+  }
+
+  .card {
+    @apply bg-surface border border-hairline rounded-2xl shadow-card;
+  }
+
+  .tech-tag {
+    @apply px-3 py-1 text-[11px] font-sans uppercase tracking-wider border border-hairline rounded-full text-ink-muted;
+  }
+
+  .row-line {
+    @apply border-t border-hairline;
+  }
+
+  .filter-btn {
+    @apply text-sm text-ink-faint hover:text-ink transition-colors;
+  }
+  .filter-btn.active {
+    @apply text-ink font-medium underline underline-offset-8 decoration-accent;
+  }
+}
